@@ -28,7 +28,7 @@ class UserLocation extends Component {
     }
 
     async getWeather(){
-        await fetch('http://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query={Ghana}',{
+        await fetch('https://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query={Ghana}',{
             method: 'GET'
           }).then(response => response.json())   
           .then(data => {
@@ -68,7 +68,7 @@ class UserLocation extends Component {
         console.log(this.state)
 
     const {search} =this.state
-    axios.get(`http://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query=${this.state.search}`,this.state)
+    axios.get(`https://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query=${this.state.search}`,this.state)
     .then(res =>{
         console.log(res)
         if(res.data['current'] == null){
