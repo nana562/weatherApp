@@ -36,7 +36,7 @@ class App extends Component{
   }
 
   async getWeather(){
-  await fetch('https://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query={Ghana}',{
+  await fetch('http://api.weatherstack.com/current?access_key=50277e7afa77c3a10e2909babc252a0c&query={Ghana}',{
       method: 'GET'
     }).then(response => response.json())   
     .then(data => {
